@@ -56,6 +56,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
 Plugin 'bling/vim-airline'
 Plugin 'mattn/emmet-vim'
+Plugin 'wincent/Command-T'
+Plugin 'sjbach/lusty'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -237,6 +240,15 @@ let g:airline_inactive_collapse=1
 let g:airline_theme='badwolf'
 let g:airline_powerline_font=1
 let g:airline#extensions#tabline#enabled = 1
+
+" ============ Command-T ================
+
+if &term =~ "xterm" || &term =~ "screen"
+  let g:CommandTCancelMap = ['<ESC>', '<C-c>']
+endif
+
+
+
 
 " ============ Formatting ================
 
