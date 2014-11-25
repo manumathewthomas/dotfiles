@@ -1,7 +1,6 @@
 set nocompatible
 filetype off
 
-"test 
 " ============= General Config =================
 
 let mapleader="\\"
