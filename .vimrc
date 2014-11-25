@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-
+"sdfgsdg
 " ============= General Config =================
 
 let mapleader="\\"
