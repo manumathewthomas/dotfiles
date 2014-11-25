@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-"sdfgsdg
+
 " ============= General Config =================
 
 let mapleader="\\"
@@ -261,6 +261,6 @@ function! HLNext (blinktime)
   redraw
 endfunction
 
- exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
-    set list
+ "exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+    "set list
 
