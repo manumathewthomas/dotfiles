@@ -22,7 +22,7 @@ set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 
-
+  
 syntax on
 
 
@@ -56,7 +56,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
 Plugin 'bling/vim-airline'
 Plugin 'mattn/emmet-vim'
-Plugin 'wincent/Command-T'
 Plugin 'sjbach/lusty'
 Plugin 'Valloric/YouCompleteMe'
 
@@ -241,12 +240,10 @@ let g:airline_theme='badwolf'
 let g:airline_powerline_font=1
 let g:airline#extensions#tabline#enabled = 1
 
-" ============ Command-T ================
+" ============ You Complete Me ================
 
-if &term =~ "xterm" || &term =~ "screen"
-  let g:CommandTCancelMap = ['<ESC>', '<C-c>']
-endif
-
+let g:ycm_register_as_syntastic_checker = 0
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 
 
@@ -274,4 +271,3 @@ endfunction
 
  "exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
     "set list
-

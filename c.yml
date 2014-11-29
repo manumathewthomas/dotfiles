@@ -1,7 +1,7 @@
 # ~/.tmuxinator/c.yml
 
 name: c
-root: ~/.tmuxinator/
+root: ~/CS/C/exercises 
 
 # Optional tmux socket
 # socket_name: foo
