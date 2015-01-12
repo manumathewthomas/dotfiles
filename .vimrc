@@ -51,13 +51,15 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'reedes/vim-wordy'
 Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-lexical'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
 Plugin 'bling/vim-airline'
 Plugin 'mattn/emmet-vim'
 Plugin 'sjbach/lusty'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -154,8 +156,9 @@ nnoremap <space> :
 
 " ============ AutoCommands ================
 
-autocmd FileType markdown,mkd,md,mdown,mkdn,mdwn,mdtxt,mdtext,text call SetMarkDownOptions()
+
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd FileType markdown,mkd,md,mdown,mkdn,mdwn,mdtxt,mdtext,text call SetMarkDownOptions()
 
 
 function! SetMarkDownOptions()
@@ -190,7 +193,7 @@ nmap <Leader>h <Plug>(easymotion-linebackward)
 
 " ============ Goyo ================
 
-nnoremap <Leader>G :Goyo<CR>
+"nnoremap <Leader>G :Goyo<CR>
 
 
 " ============ Wordy ================
@@ -224,7 +227,8 @@ let indent_guides_guide_size = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open = 1
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -Wall'
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++ -Wall'
 
 " ============ Airline ================
 
