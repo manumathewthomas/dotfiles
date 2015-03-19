@@ -89,3 +89,14 @@ export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
  alias ...="cd ../.."
  alias ....="cd ../../.."
 
+ growl() {
+  local msg="\\e]9;\n\n${*}\\007"
+
+  case $TERM in screen*)
+    echo -ne '\eP'${msg}'\e\\' ;;
+  *)
+    echo -ne ${msg} ;;
+ esac
+ return
+
+ }

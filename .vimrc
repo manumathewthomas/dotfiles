@@ -1,5 +1,6 @@
 set nocompatible
-filetype off
+filetype off 
+filetype plugin on
 
 " ============= General Config =================
 
@@ -42,14 +43,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-repeat'
-Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Raimondi/delimitMate'
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter' 
 Plugin 'reedes/vim-wordy'
-Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-lexical'
 Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
@@ -60,6 +57,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'Yggdroot/indentLine'
+Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'SirVer/ultisnips'
+Plugin 'auctex.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -153,18 +154,17 @@ nnoremap <leader>ev :split $MYVIMRC<CR>
 nnoremap <leader>vev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <space> :
+nnoremap vaa ggVG
+nnoremap <leader>s :set spell!<CR>
+nnoremap <leader>t :enew<CR>
+nnoremap <leader>] :bn<CR>
+nnoremap <leader>[ :bp<CR>
+
+vnoremap . :norm.<CR>
 
 " ============ AutoCommands ================
 
-
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd FileType markdown,mkd,md,mdown,mkdn,mdwn,mdtxt,mdtext,text call SetMarkDownOptions()
-
-
-function! SetMarkDownOptions()
-  Goyo
-  PencilSoft
-endfunction
 
 " ============ NerdTree ================
 
